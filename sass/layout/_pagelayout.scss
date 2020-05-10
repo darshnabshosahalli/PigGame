@@ -1,0 +1,26 @@
+// page layout
+.container {
+    display: grid;
+    background-color: red;
+    grid-template-columns: repeat(auto-fill,minmax(46rem,1fr));
+    width: 100%;
+    position: absolute;
+    height: 100%;
+
+    @include respond(tablet-land) {
+        width: 100rem;
+        @include center-box;
+        height: auto;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        justify-content: center;
+
+        @include respond(tablet-land) {
+            padding: 10rem;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.button {
+    // position
+    position: absolute;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+
+    // typography
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: 'Lato';
+
+    @include respond(tablet-land) {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        left: 50%;
+    }
+
+    & > svg {
+        width: auto;
+        height: 2.5rem;
+        transition: all .2s ease;
+
+        & > * {
+            stroke: $primary-app-color;
+        }
+    }
+
+    @media(hover:hover) {
+        &:hover > svg {
+            margin-right: 5px;
+        }
+    }
+}
+.dice {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+
+    @include respond(tablet-land) {
+        top: 62%;
+        transform: translateX(-50%);
+    }
+}
+.hold {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+    right: 3rem;
+
+    @include respond(tablet-land) {
+        top: 72%;
+        transform: translateX(-50%);
+    }
+}
+.score {
+    color: #555;
+    font-size: 18px;
+    font-family: 'Lato';
+    text-align: center;
+    width: 160px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 85%;
+    padding: 1rem;
+}

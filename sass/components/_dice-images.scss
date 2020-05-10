@@ -1,0 +1,20 @@
+.dice-images {
+    // positioning 
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    justify-content: space-evenly;
+
+    @include center-box;
+
+    & > * {
+        height: 10rem;
+        box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+        display: none;
+    }
+
+    @include respond(tablet-land) {
+        top: 25%;
+        transform: translate(-50%,-25%);
+    }
+}

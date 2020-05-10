@@ -1,0 +1,41 @@
+// player name styles
+.player-name {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+// player score styles
+.player-score {
+    text-align: center;
+    font-size: 8rem;
+    font-weight: 100;
+    color: $primary-app-color;
+
+    @include respond(tablet-land) {
+        margin-bottom: 50%;
+    }
+}
+
+// player score box
+.player-current-score {
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    text-align: center;
+    background-color: #EB4D4D;
+    color: $white-color;
+    text-transform: uppercase;
+
+    & > *{
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    & > *:last-child {
+        font-size: 3rem;
+        margin-bottom: 0;
+    }
+}
